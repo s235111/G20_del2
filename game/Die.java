@@ -4,7 +4,7 @@ public class Die {
 
 	private int value;
 	private int sides;
-	private Random random;
+	private Random random = new Random();
 
 	public Die() {
 		sides = 6;
