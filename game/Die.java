@@ -1,10 +1,22 @@
+import java.util.Random;
+
 public class Die {
 
 	private int value;
+	private int sides;
+	private Random random;
+
+	public Die() {
+		sides = 6;
+	}
+
+	public Die(int sides) {
+		this.sides = sides;
+	}
 
 	public void roll() {
-		var val = (Math.random() * 6) + 1;
-		value = (int) val;
+		value = random.nextInt(sides) + 1;
+
 	}
 
 	public int getValue() {
@@ -12,4 +24,3 @@ public class Die {
 	}
 
 }
-
