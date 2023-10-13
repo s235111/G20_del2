@@ -7,7 +7,30 @@ import java.util.HashMap;
 class Languages {
 
 	public static void main(String[] args){
-		printLanguages();
+		System.out.println(chooseLanguage());
+	}
+
+	public static HashMap chooseLanguage(){
+
+		boolean languageChosen = false;
+		Scanner sc = new Scanner(System.in);
+		File langFile;
+		String playerChoice = "English.csv";
+		while(languageChosen != true){
+			System.out.println("Choose language:");
+			printLanguages();
+			playerChoice = sc.nextLine() + ".csv";
+			langFile = new File(playerChoice);
+
+			if (langFile.exists()){
+				languageChosen = true;
+			} else{
+				System.out.println("The chosen file does not exist, please note your selection is case sensitive, try again");
+			}
+		}
+		sc.close();
+
+		return parse(playerChoice);
 	}
 
 	public static void printLanguages(){
@@ -20,8 +43,10 @@ class Languages {
 
 		File[] listOfFiles = folder.listFiles(filter);
 
+		System.out.println("Below you see all the languages currently supported");
+
 		for(File e: listOfFiles){
-			System.out.println(e);
+			System.out.println(e.getName().split(".csv")[0]);
 		}
 }
 
