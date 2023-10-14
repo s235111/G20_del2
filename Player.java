@@ -23,7 +23,7 @@ class Player {
 		this.name = nameToSet;
 	}
 
-	public static Account getAccount(){
+	public Account getAccount(){
 		return this.account;
 	}
 
