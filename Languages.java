@@ -62,7 +62,7 @@ class Languages {
         Scanner sc = new Scanner(lang);
         while(sc.hasNextLine()){
             data = sc.nextLine();
-            dataParsed = data.split(",");
+            dataParsed = data.split(",", 2);
             map.put(dataParsed[0], dataParsed[1]);
         }
         sc.close();
