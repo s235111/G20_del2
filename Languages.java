@@ -10,6 +10,25 @@ class Languages {
 		System.out.println(chooseLanguage());
 	}
 
+	public static String[] getAvailableLanguages(){
+		File folder = new File(".");
+		FilenameFilter filter = new FilenameFilter() {
+            public boolean accept(File dir, String name) {
+                return name.endsWith(".csv");  // Filters for .csv files
+            }
+        };
+		File[] listOfFiles = folder.listFiles(filter);
+		String[] fileNames = new String[listOfFiles.length];
+		for(int i = 0; i < listOfFiles.length; i++){
+			fileNames[i] = listOfFiles[i].getName();
+		}
+		return fileNames;
+	}
+
+	public static HashMap getLanguage(String language){
+		return parse(language + ".csv");
+	}
+
 	public static HashMap chooseLanguage(){
 
 		boolean languageChosen = false;
