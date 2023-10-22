@@ -3,10 +3,11 @@ public class Square {
 	int moneyValue;
 	boolean extraTurn;
 
-	public Square() {
-
-	}
-
+	/*
+	 * public Square() {
+	 * 
+	 * }
+	 */
 	public Square(String nameToken, int moneyValue, boolean extraTurn) {
 		this.nameToken = nameToken;
 		this.moneyValue = moneyValue;
