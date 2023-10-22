@@ -5,31 +5,41 @@ public class GameController {
 	DiceCup diceCup = new DiceCup();
 
 	Square[] squares = new Square[11];
+	// Need to add in all the squares in the array, but it dont work for me so
+	// please NOAH FIX IT I BEG
 
 	public void playGame() {
 		boolean isPlayerTwo = false;
 		Player currentPlayer;
+		try {
+			// Sets the names from the UI
+			player1.setName = (language.get("player1Name"));
+			player2.setName = (language.get("player2Name"));
 
-		player1.setName = (language.get("player1Name"));
-		player2.setName = (language.get("player2Name"));
+			while (true) {
+				currentPlayer = isPlayerTwo ? player2 : player1;
+				// Something change label to currentplayer
+				// Display current info
 
-
-
-		while (true) {
-			currentPlayer = isPlayerTwo ? player2 : player1;
-			//Something change label to currentplayer
-			//Display current info
-
-			playTurn(currentPlayer) {
+				playTurn(currentPlayer);
+				if (checkWin(currentPlayer)) {
+					// label change, to currentplayer wins
+					// label change, to otherplayer looses
+					break;
+				}
+				// Switches the turn
+				isPlayerTwo = !isPlayerTwo;
 
 			}
 
-
-
+		} catch (java.util.NoSuchElementException e) {
+			// This happens when you press Ctrl+C
+			// Simply ignore the exception in this case
+		} catch (Exception e) {
+			System.err.println("\033[J\033[31mSomething went wrong\033[m");
+			e.printStackTrace();
+		} finally {
 		}
-
-
-
 	}
 
 	public void playTurn(Player player) {
@@ -37,8 +47,7 @@ public class GameController {
 		diceCup.rollDice();
 		var sum = diceCup.getSum();
 		player.getAccount.deposit(squares[sum].moneyValue);
-
-		player.addPoints(sum);
+		// Label change to where they landed, and their new balance
 
 	}
 
@@ -49,6 +58,7 @@ public class GameController {
 	}
 
 	public static void main(String[] args) {
-
+		var game = new GameController();
+		game.playGame();
 	}
 }
