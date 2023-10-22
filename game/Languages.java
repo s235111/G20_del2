@@ -11,7 +11,7 @@ class Languages {
 	}
 
 	public static String[] getAvailableLanguages(){
-		File folder = new File(".");
+		File folder = new File("./languages");
 		FilenameFilter filter = new FilenameFilter() {
             public boolean accept(File dir, String name) {
                 return name.endsWith(".csv");  // Filters for .csv files
