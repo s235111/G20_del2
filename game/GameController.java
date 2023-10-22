@@ -57,6 +57,30 @@ public class GameController {
 
 	}
 
+	public int getPlayer1Balance() {
+		return player1.getAccount().getBalance();
+	}
+
+	public int getPlayer2Balance() {
+		return player2.getAccount().getBalance();
+	}
+
+	public Square getSquare() {
+		return squares[diceCup.getSum()];
+	}
+
+	public int getSum() {
+		return diceCup.getSum();
+	}
+
+	public int getdie1() {
+		return diceCup.getDie1();
+	}
+
+	public int getdie2() {
+		return diceCup.getDie2();
+	}
+
 	public static void main(String[] args) {
 		var game = new GameController();
 		game.playGame();
