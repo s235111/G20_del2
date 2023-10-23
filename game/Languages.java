@@ -13,7 +13,7 @@ public class Languages {
 	}
 
 	public static String[] getAvailableLanguages() {
-		File folder = new File("./languages");
+		File folder = new File("resources");
 		FilenameFilter filter = new FilenameFilter() {
 			public boolean accept(File dir, String name) {
 				return name.endsWith(".csv"); // Filters for .csv files
@@ -30,7 +30,7 @@ public class Languages {
 
 	public static HashMap<String, String> getLanguage(String language) {
 		try {
-			return parse(language + ".csv");
+			return parse("resources/" + language + ".csv");
 		} catch (FileNotFoundException e) {
 			return null;
 		}
