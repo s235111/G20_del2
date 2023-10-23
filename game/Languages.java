@@ -25,11 +25,11 @@ class Languages {
 		return fileNames;
 	}
 
-	public static HashMap getLanguage(String language) {
+	public static HashMap<String, String> getLanguage(String language) {
 		return parse(language + ".csv");
 	}
 
-	public static HashMap chooseLanguage() {
+	public static HashMap<String, String> chooseLanguage() {
 
 		boolean languageChosen = false;
 		Scanner sc = new Scanner(System.in);
@@ -69,7 +69,7 @@ class Languages {
 		}
 	}
 
-	public static HashMap parse(String fileName) {
+	public static HashMap<String, String> parse(String fileName) {
 		HashMap<String, String> map = new HashMap<>();
 		String data;
 		String[] dataParsed;
