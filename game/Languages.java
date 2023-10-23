@@ -6,7 +6,7 @@ import java.io.FilenameFilter;
 import java.util.Scanner;
 import java.util.HashMap;
 
-class Languages {
+public class Languages {
 
 	public static void main(String[] args) {
 		System.out.println(chooseLanguage());

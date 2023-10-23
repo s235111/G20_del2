@@ -1,5 +1,6 @@
 package ui;
 
+import game.*;
 import javax.swing.*;
 import java.util.HashMap;
 

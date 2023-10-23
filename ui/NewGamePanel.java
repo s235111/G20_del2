@@ -1,5 +1,6 @@
 package ui;
 
+import game.Languages;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
