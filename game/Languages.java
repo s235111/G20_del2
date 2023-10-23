@@ -28,7 +28,11 @@ public class Languages {
 	}
 
 	public static HashMap<String, String> getLanguage(String language) {
-		return parse(language + ".csv");
+		try {
+			return parse(language + ".csv");
+		} catch (FileNotFoundException e) {
+			return null;
+		}
 	}
 
 	public static HashMap<String, String> chooseLanguage() {
@@ -71,24 +75,19 @@ public class Languages {
 		}
 	}
 
-	public static HashMap<String, String> parse(String fileName) {
+	public static HashMap<String, String> parse(String fileName) throws FileNotFoundException {
 		HashMap<String, String> map = new HashMap<>();
 		String data;
 		String[] dataParsed;
 
-		// try required to not get error
-		try {
-			File lang = new File(fileName);
-			Scanner sc = new Scanner(lang);
-			while (sc.hasNextLine()) {
-				data = sc.nextLine();
-				dataParsed = data.split(",", 2);
-				map.put(dataParsed[0], dataParsed[1]);
-			}
-			sc.close();
-		} catch (FileNotFoundException e) {
-			System.out.println("error");
+		File lang = new File(fileName);
+		Scanner sc = new Scanner(lang);
+		while (sc.hasNextLine()) {
+			data = sc.nextLine();
+			dataParsed = data.split(",", 2);
+			map.put(dataParsed[0], dataParsed[1]);
 		}
+		sc.close();
 
 		return map;
 	}
