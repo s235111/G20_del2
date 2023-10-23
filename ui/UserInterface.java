@@ -11,7 +11,6 @@ class UserInterface extends JFrame implements LanguageProvider {
 		setLanguage("English");
 		setContentPane(new NewGamePanel(this));
 		setTitle(language.get("gameTitle"));
-		setLayout(null);
 		setVisible(true);
 		var insets = getInsets();
 		var innerWidth = 400;

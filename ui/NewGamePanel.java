@@ -2,6 +2,7 @@ package ui;
 
 import game.Languages;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 class NewGamePanel extends JPanel {
@@ -26,22 +27,44 @@ class NewGamePanel extends JPanel {
 		player2NameField = new JTextField();
 		startButton = new JButton();
 
+		languageBox.setSelectedItem("English");
+
 		languageBox.addActionListener((ActionEvent e) -> {
 			languageProvider.setLanguage((String) languageBox.getSelectedItem());
 			updateLanguage();
 		});
 
-		languageBox.setSelectedItem("English");
-
-		add(languageLabel);
-		add(languageBox);
-		add(player1NameLabel);
-		add(player1NameField);
-		add(player2NameLabel);
-		add(player2NameField);
-		add(startButton);
-
 		updateLanguage();
+
+		setBorder(new javax.swing.border.EmptyBorder(40, 40, 40, 40));
+
+		var layout = new GridBagLayout();
+		var constraints = new GridBagConstraints();
+
+		layout.columnWeights = new double[] { 0.0, 1.0 };
+		constraints.insets = new Insets(10, 10, 10, 10);
+
+		player1NameField.setMargin(new Insets(4, 6, 6, 6));
+		player2NameField.setMargin(new Insets(4, 6, 6, 6));
+		startButton.setMargin(new Insets(6, 14, 6, 14));
+
+		setLayout(layout);
+
+		constraints.gridx = 0;
+		constraints.anchor = GridBagConstraints.WEST;
+		add(languageLabel, constraints);
+		add(player1NameLabel, constraints);
+		add(player2NameLabel, constraints);
+		constraints.gridx = 1;
+		constraints.anchor = GridBagConstraints.CENTER;
+		constraints.fill = GridBagConstraints.BOTH;
+		add(languageBox, constraints);
+		add(player1NameField, constraints);
+		add(player2NameField, constraints);
+		constraints.gridx = 0;
+		constraints.gridwidth = 2;
+		add(startButton, constraints);
+
 	}
 
 	private void updateLanguage() {
