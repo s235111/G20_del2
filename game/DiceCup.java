@@ -1,3 +1,5 @@
+package game;
+
 public class DiceCup {
 
 	private Die die1 = new Die();
