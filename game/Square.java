@@ -1,4 +1,7 @@
+package game;
+
 public class Square {
+
 	String nameToken;
 	int moneyValue;
 	boolean extraTurn;
