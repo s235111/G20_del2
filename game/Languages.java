@@ -22,7 +22,8 @@ public class Languages {
 		File[] listOfFiles = folder.listFiles(filter);
 		String[] fileNames = new String[listOfFiles.length];
 		for (int i = 0; i < listOfFiles.length; i++) {
-			fileNames[i] = listOfFiles[i].getName();
+			String name = listOfFiles[i].getName();
+			fileNames[i] = name.substring(0, name.length() - 4); // Remove the .csv extension
 		}
 		return fileNames;
 	}
