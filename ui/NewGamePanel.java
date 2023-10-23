@@ -30,6 +30,8 @@ class NewGamePanel extends JPanel {
 			updateLanguage();
 		});
 
+		languageBox.setSelectedItem("English");
+
 		add(languageLabel);
 		add(languageBox);
 		add(player1NameLabel);
