@@ -26,7 +26,7 @@ public class GameController {
 			new Square("square12", 650, false),
 	};
 
-	public void playGame() {
+	public void startGame() {
 		player1.getAccount().setBalance(1000);
 		player2.getAccount().setBalance(1000);
 		currentPlayer = isPlayerTwo ? player2 : player1;
@@ -37,7 +37,6 @@ public class GameController {
 		if (checkWin(currentPlayer)) {
 			// label change, to currentplayer wins
 			// label change, to otherplayer looses
-			break;
 		}
 		// Switches the turn
 		isPlayerTwo = !isPlayerTwo;
@@ -91,6 +90,6 @@ public class GameController {
 	public static void main(String[] args) {
 		var ui = new ui.UserInterface();
 		var game = new GameController();
-		game.playGame();
+		game.startGame();
 	}
 }
