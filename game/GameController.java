@@ -11,6 +11,8 @@ public class GameController {
 	Player currentPlayer;
 
 	Square[] squares = new Square[] {
+			null,
+			null,
 			new Square("square2", 250, false),
 			new Square("square3", -100, false),
 			new Square("square4", 100, false),
