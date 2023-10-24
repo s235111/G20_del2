@@ -1,3 +1,5 @@
+package game;
+
 public class GameController {
 	Player player1 = new Player();
 	Player player2 = new Player();
