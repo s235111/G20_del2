@@ -6,6 +6,16 @@ public class Square {
 	int moneyValue;
 	boolean extraTurn;
 
+	public Square() {
+
+	}
+
+	public Square(String nameToken, int moneyValue, boolean extraTurn) {
+		this.nameToken = nameToken;
+		this.moneyValue = moneyValue;
+		this.extraTurn = extraTurn;
+	}
+
 	public String getNameToken() {
 		return this.nameToken;
 	}
@@ -26,8 +36,8 @@ public class Square {
 		return this.extraTurn;
 	}
 
-	public void setExtraTurn(boolean newTurn) {
-		this.extraTurn = newTurn;
+	public void setExtraTurn(boolean extraTurn) {
+		this.extraTurn = extraTurn;
 
 	}
 
