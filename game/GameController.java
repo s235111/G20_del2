@@ -25,8 +25,6 @@ public class GameController {
 	};
 
 	public void playGame() {
-		boolean isPlayerTwo = false;
-		Player currentPlayer;
 		currentPlayer = isPlayerTwo ? player2 : player1;
 		// Something change label to currentplayer
 		// Display current info
