@@ -4,7 +4,21 @@ public class GameController {
 
 	DiceCup diceCup = new DiceCup();
 
-	Square[] squares = new Square[11];
+	Square[] squares = new Square[] {
+			new Square("square2", 250, false),
+			new Square("square3", -100, false),
+			new Square("square4", 100, false),
+			new Square("square5", -20, false),
+			new Square("square6", 180, false),
+			new Square("square7", 0, false),
+			new Square("square8", -70, false),
+			new Square("square9", 60, false),
+			new Square("square10", -80, true),
+			new Square("square11", -50, false),
+			new Square("square12", 650, false),
+
+	};
+
 	// Need to add in all the squares in the array, but it dont work for me so
 	// please NOAH FIX IT I BEG
 
