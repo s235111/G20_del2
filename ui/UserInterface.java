@@ -4,7 +4,7 @@ import game.*;
 import javax.swing.*;
 import java.util.HashMap;
 
-class UserInterface extends JFrame implements LanguageProvider {
+public class UserInterface extends JFrame implements LanguageProvider {
 	private HashMap<String, String> language;
 
 	public UserInterface() {
