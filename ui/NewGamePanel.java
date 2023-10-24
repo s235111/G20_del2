@@ -8,13 +8,13 @@ import java.awt.event.ActionEvent;
 class NewGamePanel extends JPanel {
 	private UserInterface userInterface;
 
-	JLabel languageLabel;
-	JComboBox<String> languageBox;
-	JLabel player1NameLabel;
-	JLabel player2NameLabel;
-	JTextField player1NameField;
-	JTextField player2NameField;
-	JButton startButton;
+	private JLabel languageLabel;
+	private JComboBox<String> languageBox;
+	private JLabel player1NameLabel;
+	private JLabel player2NameLabel;
+	private JTextField player1NameField;
+	private JTextField player2NameField;
+	private JButton startButton;
 
 	public NewGamePanel(UserInterface userInterface) {
 		this.userInterface = userInterface;
