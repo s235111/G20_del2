@@ -35,6 +35,7 @@ class UserInterface extends JFrame implements LanguageProvider {
 
 	public void startButtonPressed(String player1Name, String player2Name) {
 		setContentPane(new GamePanel(this));
+		revalidate();
 	}
 
 	public static void main(String[] args) {
