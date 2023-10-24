@@ -27,36 +27,19 @@ public class GameController {
 	public void playGame() {
 		boolean isPlayerTwo = false;
 		Player currentPlayer;
-		try {
-			// Sets the names from the UI
-			// player1.setName = (language.get("player1Name"));
-			// player2.setName = (language.get("player2Name"));
-			player1.setName("player1");
-			player1.setName("player2");
-			while (true) {
-				currentPlayer = isPlayerTwo ? player2 : player1;
-				// Something change label to currentplayer
-				// Display current info
+		currentPlayer = isPlayerTwo ? player2 : player1;
+		// Something change label to currentplayer
+		// Display current info
 
-				playTurn(currentPlayer);
-				if (checkWin(currentPlayer)) {
-					// label change, to currentplayer wins
-					// label change, to otherplayer looses
-					break;
-				}
-				// Switches the turn
-				isPlayerTwo = !isPlayerTwo;
-
-			}
-
-		} catch (java.util.NoSuchElementException e) {
-			// This happens when you press Ctrl+C
-			// Simply ignore the exception in this case
-		} catch (Exception e) {
-			System.err.println("\033[J\033[31mSomething went wrong\033[m");
-			e.printStackTrace();
-		} finally {
+		playTurn(currentPlayer);
+		if (checkWin(currentPlayer)) {
+			// label change, to currentplayer wins
+			// label change, to otherplayer looses
+			break;
 		}
+		// Switches the turn
+		isPlayerTwo = !isPlayerTwo;
+
 	}
 
 	public void playTurn(Player player) {
@@ -72,6 +55,11 @@ public class GameController {
 		// vind hvis der er flere penge end 3000
 		return player.getAccount().getBalance() >= 3000;
 
+	}
+
+	public void setPlayerNames(String player1Name, String player2Name) {
+		player1.setName(player1Name);
+		player2.setName(player2Name);
 	}
 
 	public int getPlayer1Balance() {
