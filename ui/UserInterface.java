@@ -32,6 +32,10 @@ class UserInterface extends JFrame implements LanguageProvider {
 		setLanguage(Languages.getLanguage(language));
 	}
 
+	public void startButtonPressed(String player1Name, String player2Name) {
+		setContentPane(new GamePanel(this));
+	}
+
 	public static void main(String[] args) {
 		var ui = new UserInterface();
 	}

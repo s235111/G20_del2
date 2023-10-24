@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 class NewGamePanel extends JPanel {
-	private LanguageProvider languageProvider;
+	private UserInterface userInterface;
 
 	JLabel languageLabel;
 	JComboBox<String> languageBox;
@@ -16,8 +16,8 @@ class NewGamePanel extends JPanel {
 	JTextField player2NameField;
 	JButton startButton;
 
-	public NewGamePanel(LanguageProvider languageProvider) {
-		this.languageProvider = languageProvider;
+	public NewGamePanel(UserInterface userInterface) {
+		this.userInterface = userInterface;
 
 		languageLabel = new JLabel();
 		languageBox = new JComboBox<String>(Languages.getAvailableLanguages());
@@ -30,8 +30,12 @@ class NewGamePanel extends JPanel {
 		languageBox.setSelectedItem("English");
 
 		languageBox.addActionListener((ActionEvent e) -> {
-			languageProvider.setLanguage((String) languageBox.getSelectedItem());
+			this.userInterface.setLanguage((String) languageBox.getSelectedItem());
 			updateLanguage();
+		});
+
+		startButton.addActionListener((ActionEvent e) -> {
+			this.userInterface.startButtonPressed(player1NameField.getText(), player2NameField.getText());
 		});
 
 		updateLanguage();
@@ -68,7 +72,7 @@ class NewGamePanel extends JPanel {
 	}
 
 	private void updateLanguage() {
-		var language = languageProvider.getLanguage();
+		var language = userInterface.getLanguage();
 
 		languageLabel.setText(language.get("language"));
 		player1NameLabel.setText(language.get("player1Name"));
