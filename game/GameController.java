@@ -19,9 +19,6 @@ public class GameController {
 
 	};
 
-	// Need to add in all the squares in the array, but it dont work for me so
-	// please NOAH FIX IT I BEG
-
 	public void playGame() {
 		boolean isPlayerTwo = false;
 		Player currentPlayer;
