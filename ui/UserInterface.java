@@ -16,6 +16,7 @@ class UserInterface extends JFrame implements LanguageProvider {
 		var innerWidth = 400;
 		var innerHeight = 300;
 		setSize(innerWidth + insets.left + insets.right, innerHeight + insets.top + insets.bottom);
+		setMinimumSize(getSize());
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
 
