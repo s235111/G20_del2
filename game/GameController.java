@@ -25,6 +25,8 @@ public class GameController {
 	};
 
 	public void playGame() {
+		player1.getAccount().setBalance(1000);
+		player2.getAccount().setBalance(1000);
 		currentPlayer = isPlayerTwo ? player2 : player1;
 		// Something change label to currentplayer
 		// Display current info
