@@ -16,7 +16,6 @@ public class GameController {
 			new Square("square10", -80, true),
 			new Square("square11", -50, false),
 			new Square("square12", 650, false),
-
 	};
 
 	public void playGame() {
