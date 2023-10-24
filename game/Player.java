@@ -1,3 +1,5 @@
+package game;
+
 class Player {
 
 	private String name;
@@ -23,7 +25,7 @@ class Player {
 		this.name = nameToSet;
 	}
 
-	public Account getAccount(){
+	public Account getAccount() {
 		return this.account;
 	}
 
