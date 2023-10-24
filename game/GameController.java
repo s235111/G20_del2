@@ -13,9 +13,10 @@ public class GameController {
 		Player currentPlayer;
 		try {
 			// Sets the names from the UI
-			player1.setName = (language.get("player1Name"));
-			player2.setName = (language.get("player2Name"));
-
+			// player1.setName = (language.get("player1Name"));
+			// player2.setName = (language.get("player2Name"));
+			player1.setName("player1");
+			player1.setName("player2");
 			while (true) {
 				currentPlayer = isPlayerTwo ? player2 : player1;
 				// Something change label to currentplayer
@@ -46,14 +47,14 @@ public class GameController {
 
 		diceCup.rollDice();
 		var sum = diceCup.getSum();
-		player.getAccount.deposit(squares[sum].moneyValue);
+		player.getAccount().deposit(squares[sum].moneyValue);
 		// Label change to where they landed, and their new balance
 
 	}
 
 	public boolean checkWin(Player player) {
 		// vind hvis der er flere penge end 3000
-		return player.getAccount.getBalance() >= 3000;
+		return player.getAccount().getBalance() >= 3000;
 
 	}
 
