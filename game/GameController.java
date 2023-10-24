@@ -7,6 +7,8 @@ public class GameController {
 	Player player2 = new Player();
 
 	DiceCup diceCup = new DiceCup();
+	boolean isPlayerTwo = false;
+	Player currentPlayer;
 
 	Square[] squares = new Square[] {
 			new Square("square2", 250, false),
