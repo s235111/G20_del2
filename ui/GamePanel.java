@@ -66,4 +66,9 @@ public class GamePanel extends JPanel {
 		constraints.gridy++;
 		add(playTurnButton, constraints);
 	}
+
+	public void updatePlayerNames(String player1Name, String player2Name) {
+		player1NameLabel.setText(player1Name);
+		player2NameLabel.setText(player2Name);
+	}
 }

@@ -36,7 +36,11 @@ public class UserInterface extends JFrame {
 	}
 
 	public void startButtonPressed(String player1Name, String player2Name) {
-		setContentPane(new GamePanel(this));
+		game.setPlayerNames(player1Name, player2Name);
+		game.startGame();
+		GamePanel gamePanel = new GamePanel(this);
+		gamePanel.updatePlayerNames(player1Name, player2Name);
+		setContentPane(gamePanel);
 		revalidate();
 	}
 
