@@ -59,7 +59,15 @@ public class UserInterface extends JFrame {
 		GamePanel gamePanel = (GamePanel) getContentPane();
 		gamePanel.updatePlayerBalances(game.getPlayer1Balance(), game.getPlayer2Balance());
 		gamePanel.updatePlayerTurn(game.isPlayerTwo());
-		gamePanel.updateFeedback(language.get(game.getSquare().getNameToken() + "Description"));
+		// This uses html for the JLabel
+		// It's not pretty, but it's what's needed for a JLabel to span multiple lines
+		gamePanel.updateFeedback(String.format(
+				"<html><div style=\"text-align:center\">%s %d + %d = %d<br/>%s</div></html>",
+				language.get("youRolled"),
+				game.getDie1Value(),
+				game.getDie2Value(),
+				game.getSum(),
+				language.get(game.getSquare().getNameToken() + "Description")));
 		if (game.hasCurrentPlayerWon()) {
 			gamePanel.gameOver(game.isPlayerTwo());
 		}

@@ -3,8 +3,9 @@ language,Language
 startGame,Start Game
 player1Name,Player 1 Name
 player2Name,Player 2 Name
-playTurn,Play Turn
 startInfo,Press the button to play the game!
+playTurn,Play Turn
+youRolled,You rolled
 yourTurn,Your turn
 youWon,You won!
 youLost,You lost

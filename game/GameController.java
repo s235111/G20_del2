@@ -84,11 +84,11 @@ public class GameController {
 		return diceCup.getSum();
 	}
 
-	public int getdie1() {
+	public int getDie1Value() {
 		return diceCup.getDie1();
 	}
 
-	public int getdie2() {
+	public int getDie2Value() {
 		return diceCup.getDie2();
 	}
 }
