@@ -6,8 +6,10 @@ import java.util.HashMap;
 
 public class UserInterface extends JFrame {
 	private HashMap<String, String> language;
+	private GameController game;
 
-	public UserInterface() {
+	public UserInterface(GameController game) {
+		this.game = game;
 		setLanguage("English");
 		setContentPane(new NewGamePanel(this));
 		setTitle(language.get("gameTitle"));
@@ -36,5 +38,10 @@ public class UserInterface extends JFrame {
 	public void startButtonPressed(String player1Name, String player2Name) {
 		setContentPane(new GamePanel(this));
 		revalidate();
+	}
+
+	public static void main(String[] args) {
+		var game = new GameController();
+		var ui = new UserInterface(game);
 	}
 }

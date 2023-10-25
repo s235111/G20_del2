@@ -83,10 +83,4 @@ public class GameController {
 	public int getdie2() {
 		return diceCup.getDie2();
 	}
-
-	public static void main(String[] args) {
-		var ui = new ui.UserInterface();
-		var game = new GameController();
-		game.startGame();
-	}
 }
