@@ -1,5 +1,5 @@
 rm -r build
-javac -d build game/GameController.java
+javac -d build ui/UserInterface.java
 cp -r resources build/resources
 cd build
-java game/GameController
+java ui/UserInterface
