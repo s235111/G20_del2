@@ -1,7 +1,5 @@
 package game;
 
-import ui.*;
-
 public class GameController {
 	Player player1 = new Player();
 	Player player2 = new Player();
