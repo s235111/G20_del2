@@ -71,4 +71,21 @@ public class GamePanel extends JPanel {
 		player1NameLabel.setText(player1Name);
 		player2NameLabel.setText(player2Name);
 	}
+
+	public void updatePlayerBalances(int player1Balance, int player2Balance) {
+		player1BalanceLabel.setText(Integer.toString(player1Balance));
+		player2BalanceLabel.setText(Integer.toString(player2Balance));
+	}
+
+	public void updatePlayerTurn(boolean isPlayerTwo) {
+		// TODO
+	}
+
+	public void updateFeedback(String feedback) {
+		feedbackLabel.setText(feedback);
+	}
+
+	public void gameOver() {
+		playTurnButton.setEnabled(false);
+	}
 }

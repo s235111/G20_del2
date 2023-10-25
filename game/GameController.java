@@ -35,7 +35,7 @@ public class GameController {
 		playTurn(currentPlayer);
 
 		if (checkWin(currentPlayer)) {
-			// TODO
+			return;
 		}
 
 		isPlayerTwo = !isPlayerTwo;
@@ -66,6 +66,14 @@ public class GameController {
 
 	public int getPlayer2Balance() {
 		return player2.getAccount().getBalance();
+	}
+
+	public boolean isPlayerTwo() {
+		return isPlayerTwo;
+	}
+
+	public boolean hasCurrentPlayerWon() {
+		return checkWin(currentPlayer);
 	}
 
 	public Square getSquare() {

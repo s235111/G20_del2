@@ -40,12 +40,21 @@ public class UserInterface extends JFrame {
 		game.startGame();
 		GamePanel gamePanel = new GamePanel(this);
 		gamePanel.updatePlayerNames(player1Name, player2Name);
+		gamePanel.updatePlayerBalances(game.getPlayer1Balance(), game.getPlayer2Balance());
+		gamePanel.updatePlayerTurn(game.isPlayerTwo());
 		setContentPane(gamePanel);
 		revalidate();
 	}
 
-	public void playTurnButtonPressed() {
+	protected void playTurnButtonPressed() {
 		game.playNextTurn();
+		GamePanel gamePanel = (GamePanel) getContentPane();
+		gamePanel.updatePlayerBalances(game.getPlayer1Balance(), game.getPlayer2Balance());
+		gamePanel.updatePlayerTurn(game.isPlayerTwo());
+		gamePanel.updateFeedback(language.get(game.getSquare().getNameToken() + "Description"));
+		if (game.hasCurrentPlayerWon()) {
+			gamePanel.gameOver();
+		}
 	}
 
 	public static void main(String[] args) {
