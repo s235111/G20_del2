@@ -13,6 +13,7 @@ public class UserInterface extends JFrame {
 		setLanguage("English");
 		setContentPane(new NewGamePanel(this));
 		setTitle(language.get("gameTitle"));
+		setLocationByPlatform(true);
 		setVisible(true);
 		// To get the inner size to 400x300 and not the total size of the window
 		var insets = getInsets();
