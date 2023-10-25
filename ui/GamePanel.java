@@ -31,7 +31,7 @@ public class GamePanel extends JPanel {
 		playTurnButton = new JButton(language.get("playTurn"));
 
 		playTurnButton.addActionListener((ActionEvent e) -> {
-			userInterface.playTurnButtonPressed();
+			this.userInterface.playTurnButtonPressed();
 		});
 
 		setBorder(new EmptyBorder(40, 40, 40, 40));
