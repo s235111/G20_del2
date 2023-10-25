@@ -4,25 +4,26 @@ startGame,Start Game
 player1Name,Player 1 Name
 player2Name,Player 2 Name
 playTurn,Play Turn
-s2,Tower
-s3,Crater
-s4,Palace gates
-s5,Cold Desert
-s6,Walled City
-s7,Monastery
-s8,Black Cave
-s9,Huts In The Mountain
-s10,The Werewall (Werewolf wall)
-s11,The Pit
-s12,Goldmine
-s2Description,TODO
-s3Description,TODO
-s4Description,TODO
-s5Description,TODO
-s6Description,TODO
-s7Description,TODO
-s8Description,TODO
-s9Description,TODO
-s10Description,TODO
-s11Description,TODO
-s12Description,"You have found gold in the mountains and sell it for 650, you're rich!"
+startInfo,Press the button to play the game!
+square2,Tower
+square3,Crater
+square4,Palace gates
+square5,Cold Desert
+square6,Walled City
+square7,Monastery
+square8,Black Cave
+square9,Huts In The Mountain
+square10,The Werewall (Werewolf wall)
+square11,The Pit
+square12,Goldmine
+square2Description,TODO
+square3Description,TODO
+square4Description,TODO
+square5Description,TODO
+square6Description,TODO
+square7Description,TODO
+square8Description,TODO
+square9Description,TODO
+square10Description,TODO
+square11Description,TODO
+square12Description,"You found gold in the mountains and sell it for 650, you're rich!"

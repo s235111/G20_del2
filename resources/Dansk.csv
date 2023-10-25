@@ -4,25 +4,26 @@ startGame,Start spil
 player1Name,Navn på spiller 1
 player2Name,Navn på spiller 2
 playTurn,Spil tur
-s2,Tårn
-s3,Krater
-s4,Slotsporten
-s5,Kold ørken
-s6,Den sikre by
-s7,Kloster
-s8,Den sorte grotte
-s9,Bjerghytterne
-s10,Varvæggen (varulvevæggen)
-s11,Hullet
-s12,Guldminen
-s2Description,TODO
-s3Description,TODO
-s4Description,TODO
-s5Description,TODO
-s6Description,TODO
-s7Description,TODO
-s8Description,TODO
-s9Description,TODO
-s10Description,TODO
-s11Description,TODO
-s12Description,"Du har fundet guld i bjergene og sælger det for 650, du er rig!"
+startInfo,Klik på knappen for at spille spillet!
+square2,Tårn
+square3,Krater
+square4,Slotsporten
+square5,Kold ørken
+square6,Den sikre by
+square7,Kloster
+square8,Den sorte grotte
+square9,Bjerghytterne
+square10,Varvæggen (varulvevæggen)
+square11,Hullet
+square12,Guldminen
+square2Description,TODO
+square3Description,TODO
+square4Description,TODO
+square5Description,TODO
+square6Description,TODO
+square7Description,TODO
+square8Description,TODO
+square9Description,TODO
+square10Description,TODO
+square11Description,TODO
+square12Description,"Du har fundet guld i bjergene og sælger det for 650, du er rig!"
