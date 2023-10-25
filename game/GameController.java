@@ -27,18 +27,18 @@ public class GameController {
 	public void startGame() {
 		player1.getAccount().setBalance(1000);
 		player2.getAccount().setBalance(1000);
+	}
+
+	public void playNextTurn() {
 		currentPlayer = isPlayerTwo ? player2 : player1;
-		// Something change label to currentplayer
-		// Display current info
 
 		playTurn(currentPlayer);
-		if (checkWin(currentPlayer)) {
-			// label change, to currentplayer wins
-			// label change, to otherplayer looses
-		}
-		// Switches the turn
-		isPlayerTwo = !isPlayerTwo;
 
+		if (checkWin(currentPlayer)) {
+			// TODO
+		}
+
+		isPlayerTwo = !isPlayerTwo;
 	}
 
 	public void playTurn(Player player) {
