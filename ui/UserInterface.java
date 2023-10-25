@@ -47,6 +47,10 @@ public class UserInterface extends JFrame {
 		gamePanel.updatePlayerBalances(game.getPlayer1Balance(), game.getPlayer2Balance());
 		gamePanel.updatePlayerTurn(game.isPlayerTwo());
 		setContentPane(gamePanel);
+		// Incease the minimum width of the window slightly
+		var minSize = getMinimumSize();
+		minSize.width += 100;
+		setMinimumSize(minSize);
 		revalidate();
 	}
 
