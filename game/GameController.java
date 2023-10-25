@@ -41,7 +41,7 @@ public class GameController {
 		isPlayerTwo = !isPlayerTwo;
 	}
 
-	public void playTurn(Player player) {
+	private void playTurn(Player player) {
 
 		diceCup.rollDice();
 		var sum = diceCup.getSum();
@@ -50,7 +50,7 @@ public class GameController {
 
 	}
 
-	public boolean checkWin(Player player) {
+	private boolean checkWin(Player player) {
 		// The player wins if they have a balance of at least 3000
 		return player.getAccount().getBalance() >= 3000;
 	}
