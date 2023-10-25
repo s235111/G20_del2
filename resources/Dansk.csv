@@ -5,6 +5,9 @@ player1Name,Navn på spiller 1
 player2Name,Navn på spiller 2
 playTurn,Spil tur
 startInfo,Klik på knappen for at spille spillet!
+yourTurn,Din tur
+youWon,Du vandt!
+youLost,Du tabte
 square2,Tårn
 square3,Krater
 square4,Slotsporten

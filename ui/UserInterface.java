@@ -61,7 +61,7 @@ public class UserInterface extends JFrame {
 		gamePanel.updatePlayerTurn(game.isPlayerTwo());
 		gamePanel.updateFeedback(language.get(game.getSquare().getNameToken() + "Description"));
 		if (game.hasCurrentPlayerWon()) {
-			gamePanel.gameOver();
+			gamePanel.gameOver(game.isPlayerTwo());
 		}
 	}
 
