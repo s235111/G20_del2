@@ -28,7 +28,7 @@ public class GamePanel extends JPanel {
 		player2NameLabel = new JLabel("Player 2", SwingConstants.CENTER);
 		player1BalanceLabel = new JLabel("400$", SwingConstants.CENTER);
 		player2BalanceLabel = new JLabel("300$", SwingConstants.CENTER);
-		feedbackLabel = new JLabel("You landedn on ediei", SwingConstants.CENTER);
+		feedbackLabel = new JLabel(language.get("startInfo"), SwingConstants.CENTER);
 		playTurnButton = new JButton(language.get("playTurn"));
 
 		// Attach an event listener to the play turn button
