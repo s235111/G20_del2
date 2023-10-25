@@ -3,6 +3,7 @@ package ui;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 public class GamePanel extends JPanel {
 	private UserInterface userInterface;
@@ -28,6 +29,10 @@ public class GamePanel extends JPanel {
 		player2BalanceLabel = new JLabel("300$", SwingConstants.CENTER);
 		feedbackLabel = new JLabel("You landedn on ediei", SwingConstants.CENTER);
 		playTurnButton = new JButton(language.get("playTurn"));
+
+		playTurnButton.addActionListener((ActionEvent e) -> {
+			userInterface.playTurnButtonPressed();
+		});
 
 		setBorder(new EmptyBorder(40, 40, 40, 40));
 		player1Panel.setBorder(new EtchedBorder());

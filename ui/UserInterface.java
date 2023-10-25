@@ -40,6 +40,10 @@ public class UserInterface extends JFrame {
 		revalidate();
 	}
 
+	public void playTurnButtonPressed() {
+		game.playNextTurn();
+	}
+
 	public static void main(String[] args) {
 		var game = new GameController();
 		var ui = new UserInterface(game);
