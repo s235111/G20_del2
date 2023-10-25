@@ -42,6 +42,9 @@ public class Languages {
 		while (sc.hasNextLine()) {
 			data = sc.nextLine();
 			dataParsed = data.split(",", 2);
+			if (dataParsed[1].length() > 0 && dataParsed[1].charAt(0) == '"') {
+				dataParsed[1] = dataParsed[1].substring(1, dataParsed[1].length() - 1);
+			}
 			map.put(dataParsed[0], dataParsed[1]);
 		}
 		sc.close();
