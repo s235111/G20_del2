@@ -24,10 +24,10 @@ public class GamePanel extends JPanel {
 		// Instantiate all the UI components
 		player1Panel = new JPanel(new GridBagLayout());
 		player2Panel = new JPanel(new GridBagLayout());
-		player1NameLabel = new JLabel("Player 1", SwingConstants.CENTER);
-		player2NameLabel = new JLabel("Player 2", SwingConstants.CENTER);
-		player1BalanceLabel = new JLabel("400$", SwingConstants.CENTER);
-		player2BalanceLabel = new JLabel("300$", SwingConstants.CENTER);
+		player1NameLabel = new JLabel("", SwingConstants.CENTER);
+		player2NameLabel = new JLabel("", SwingConstants.CENTER);
+		player1BalanceLabel = new JLabel("", SwingConstants.CENTER);
+		player2BalanceLabel = new JLabel("", SwingConstants.CENTER);
 		feedbackLabel = new JLabel(language.get("startInfo"), SwingConstants.CENTER);
 		playTurnButton = new JButton(language.get("playTurn"));
 
