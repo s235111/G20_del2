@@ -21,6 +21,7 @@ public class GamePanel extends JPanel {
 		this.userInterface = userInterface;
 		var language = userInterface.getLanguage();
 
+		// Instantiate all the UI components
 		player1Panel = new JPanel(new GridBagLayout());
 		player2Panel = new JPanel(new GridBagLayout());
 		player1NameLabel = new JLabel("Player 1", SwingConstants.CENTER);
@@ -30,13 +31,17 @@ public class GamePanel extends JPanel {
 		feedbackLabel = new JLabel("You landedn on ediei", SwingConstants.CENTER);
 		playTurnButton = new JButton(language.get("playTurn"));
 
+		// Attach an event listener to the play turn button
 		playTurnButton.addActionListener((ActionEvent e) -> {
 			this.userInterface.playTurnButtonPressed();
 		});
 
+		// Set a margin inside the window
 		setBorder(new EmptyBorder(40, 40, 40, 40));
+		// Put borders around the player info boxes
 		player1Panel.setBorder(new EtchedBorder());
 		player2Panel.setBorder(new EtchedBorder());
+		// Give the play turn button some extra padding
 		playTurnButton.setMargin(new Insets(6, 14, 6, 14));
 
 		var layout = new GridBagLayout();
@@ -48,6 +53,8 @@ public class GamePanel extends JPanel {
 
 		setLayout(layout);
 
+		// Add all the components with the right layout
+		// First add the player info to the player info boxes
 		constraints.insets = new Insets(10, 40, 10, 40);
 		constraints.gridx = 0;
 		player1Panel.add(player1NameLabel, constraints);
@@ -56,6 +63,7 @@ public class GamePanel extends JPanel {
 		player2Panel.add(player2BalanceLabel, constraints);
 		constraints.gridx = GridBagConstraints.RELATIVE;
 
+		// Then add everything to the window
 		constraints.insets = new Insets(10, 10, 10, 10);
 		constraints.gridy = 0;
 		add(player1Panel, constraints);

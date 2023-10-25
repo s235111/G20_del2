@@ -9,6 +9,7 @@ public class GameController {
 	Player currentPlayer;
 
 	Square[] squares = new Square[] {
+			// Two null entries, as we can't get a sum of 0 or 1 with normal dice
 			null,
 			null,
 			new Square("square2", 250, false),
@@ -46,7 +47,6 @@ public class GameController {
 		diceCup.rollDice();
 		var sum = diceCup.getSum();
 		player.getAccount().deposit(squares[sum].moneyValue);
-		// Label change to where they landed, and their new balance
 
 	}
 

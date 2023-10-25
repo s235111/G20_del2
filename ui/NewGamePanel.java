@@ -19,6 +19,7 @@ class NewGamePanel extends JPanel {
 	public NewGamePanel(UserInterface userInterface) {
 		this.userInterface = userInterface;
 
+		// Instantiate all the UI components
 		languageLabel = new JLabel();
 		languageBox = new JComboBox<String>(Languages.getAvailableLanguages());
 		player1NameLabel = new JLabel();
@@ -27,8 +28,11 @@ class NewGamePanel extends JPanel {
 		player2NameField = new JTextField();
 		startButton = new JButton();
 
+		// Make sure English is selected by default in the language selection box,
+		// as that's the default language
 		languageBox.setSelectedItem("English");
 
+		// Attach event listeners to the language selection box and start game button
 		languageBox.addActionListener((ActionEvent e) -> {
 			this.userInterface.setLanguage((String) languageBox.getSelectedItem());
 			updateLanguage();
@@ -38,9 +42,16 @@ class NewGamePanel extends JPanel {
 			this.userInterface.startButtonPressed(player1NameField.getText(), player2NameField.getText());
 		});
 
+		// Set all the text from the current language (English by default)
 		updateLanguage();
 
+		// Set a margin inside the window
 		setBorder(new javax.swing.border.EmptyBorder(40, 40, 40, 40));
+
+		// Give the inputs some extra padding
+		player1NameField.setMargin(new Insets(4, 6, 6, 6));
+		player2NameField.setMargin(new Insets(4, 6, 6, 6));
+		startButton.setMargin(new Insets(6, 14, 6, 14));
 
 		var layout = new GridBagLayout();
 		var constraints = new GridBagConstraints();
@@ -48,12 +59,9 @@ class NewGamePanel extends JPanel {
 		layout.columnWeights = new double[] { 0.0, 1.0 };
 		constraints.insets = new Insets(10, 10, 10, 10);
 
-		player1NameField.setMargin(new Insets(4, 6, 6, 6));
-		player2NameField.setMargin(new Insets(4, 6, 6, 6));
-		startButton.setMargin(new Insets(6, 14, 6, 14));
-
 		setLayout(layout);
 
+		// Add all the components with the right layout
 		constraints.gridx = 0;
 		constraints.anchor = GridBagConstraints.WEST;
 		add(languageLabel, constraints);

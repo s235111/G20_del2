@@ -14,11 +14,14 @@ public class UserInterface extends JFrame {
 		setContentPane(new NewGamePanel(this));
 		setTitle(language.get("gameTitle"));
 		setVisible(true);
+		// To get the inner size to 400x300 and not the total size of the window
 		var insets = getInsets();
 		var innerWidth = 400;
 		var innerHeight = 300;
 		setSize(innerWidth + insets.left + insets.right, innerHeight + insets.top + insets.bottom);
+		// Make sure the window has a minimum size, and just set it to the current size
 		setMinimumSize(getSize());
+		// The application should quit when the user closes the window
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	}
 
