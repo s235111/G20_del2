@@ -53,9 +53,8 @@ public class GameController {
 	}
 
 	public boolean checkWin(Player player) {
-		// vind hvis der er flere penge end 3000
+		// The player wins if they have a balance of at least 3000
 		return player.getAccount().getBalance() >= 3000;
-
 	}
 
 	public void setPlayerNames(String player1Name, String player2Name) {
