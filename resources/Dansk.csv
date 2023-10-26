@@ -1,0 +1,33 @@
+gameTitle,Terningespil II
+language,Sprog
+startGame,Start spil
+player1Name,Navn på spiller 1
+player2Name,Navn på spiller 2
+startInfo,Klik på knappen for at spille spillet!
+playTurn,Spil tur
+youRolled,Du rullede
+yourTurn,Din tur
+youWon,Du vandt!
+youLost,Du tabte
+square2,Tårn
+square3,Krater
+square4,Slotsporten
+square5,Kold ørken
+square6,Den sikre by
+square7,Kloster
+square8,Den sorte grotte
+square9,Bjerghytterne
+square10,Varvæggen (varulvevæggen)
+square11,Hullet
+square12,Guldminen
+square2Description,TODO
+square3Description,TODO
+square4Description,TODO
+square5Description,TODO
+square6Description,TODO
+square7Description,TODO
+square8Description,TODO
+square9Description,TODO
+square10Description,TODO
+square11Description,TODO
+square12Description,"Du har fundet guld i bjergene og sælger det for 650, du er rig!"
