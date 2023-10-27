@@ -20,14 +20,14 @@ square9,Huts In The Mountain
 square10,The Werewall (Werewolf wall)
 square11,The Pit
 square12,Goldmine
-square2Description,TODO
-square3Description,TODO
-square4Description,TODO
-square5Description,TODO
-square6Description,TODO
-square7Description,TODO
-square8Description,TODO
-square9Description,TODO
-square10Description,TODO
-square11Description,TODO
+square2Description,You found a tower containing an abondoned treasure and got 250 coins
+square3Description,You stumbled across a crater and lost 100 coins, no time to find them you need to go on
+square4Description,Upon reaching the palace gates you are rewarded with 100 coins as a stipend for you journey
+square5Description,While travelling the Cold Desert you stumble across a merchant and and buy firewood for 20 coins
+square6Description,You reach a walled city and witin you find an inn to tell your tales the patrons reward you with 180 coins
+square7Description,You reach a peaceful Monestery, and within find a place to rest nothing but peace
+square8Description,In the black cave you are robbed by bandits they take 70 coins from you
+square9Description,While travelling the mountains you find some huts they offer profitable trade for some things you picked up and got 60 coins
+square10Description,You reach the grand WareWall and make a deal with the vampires granting you an extra turn in return for 80 coins
+square11Description,On your travels you need to cross a bridge the bridgeman takes a toll of 50 coins to cross the great pit
 square12Description,"You found gold in the mountains and sell it for 650, you're rich!"
