@@ -46,7 +46,15 @@ public class GameController {
 
 		diceCup.rollDice();
 		var sum = diceCup.getSum();
-		player.getAccount().deposit(squares[sum].moneyValue);
+		var account = player.getAccount();
+		var moneyValue = squares[sum].moneyValue;
+		if (moneyValue > 0) {
+			account.deposit(moneyValue);
+		} else if (moneyValue < 0) {
+			// moneyValue is negative, but withdraw expects
+			// a positive number, so flip the sign first
+			account.withdraw(-moneyValue);
+		}
 
 	}
 
