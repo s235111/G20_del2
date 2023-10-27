@@ -50,6 +50,7 @@ public class UserInterface extends JFrame {
 		// Incease the minimum width of the window slightly
 		var minSize = getMinimumSize();
 		minSize.width += 100;
+		minSize.height += 40;
 		setMinimumSize(minSize);
 		revalidate();
 	}
@@ -61,13 +62,15 @@ public class UserInterface extends JFrame {
 		gamePanel.updatePlayerTurn(game.isPlayerTwo());
 		// This uses html for the JLabel
 		// It's not pretty, but it's what's needed for a JLabel to span multiple lines
+		var squareNameToken = game.getSquare().getNameToken();
 		gamePanel.updateFeedback(String.format(
-				"<html><div style=\"text-align:center\">%s %d + %d = %d<br/>%s</div></html>",
+				"<html><div style=\"text-align:center\">%s %d + %d = %d<br/>%s<br/>%s</div></html>",
 				language.get("youRolled"),
 				game.getDie1Value(),
 				game.getDie2Value(),
 				game.getSum(),
-				language.get(game.getSquare().getNameToken() + "Description")));
+				language.get(squareNameToken),
+				language.get(squareNameToken + "Description")));
 		if (game.hasCurrentPlayerWon()) {
 			gamePanel.gameOver(game.isPlayerTwo());
 		}
