@@ -18,7 +18,6 @@ public class Die {
 
 	public void roll() {
 		value = random.nextInt(sides) + 1;
-
 	}
 
 	public int getValue() {

@@ -16,8 +16,13 @@ public class Account {
 		this.balance += amount;
 	}
 
-	public void withdraw(int amount) {
+	public boolean withdraw(int amount) {
 		this.balance -= amount;
+		if (balance < 0) {
+			balance = 0;
+			return false;
+		}
+		return true;
 	}
 
 	public void setBalance(int amount) {
