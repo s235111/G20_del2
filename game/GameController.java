@@ -39,7 +39,9 @@ public class GameController {
 			return;
 		}
 
-		isPlayerTwo = !isPlayerTwo;
+		if (!getSquare().getExtraTurn()) {
+			isPlayerTwo = !isPlayerTwo;
+		}
 	}
 
 	private void playTurn(Player player) {
