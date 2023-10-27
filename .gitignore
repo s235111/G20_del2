@@ -1,8 +1,9 @@
 # Mac being annoying
 .DS_Store
 
-# Compiled classes
+# Build related files
 *.class
+*.jar
 build/
 
 # Any log files
