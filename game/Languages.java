@@ -38,7 +38,7 @@ public class Languages {
 		String[] dataParsed;
 
 		File lang = new File(fileName);
-		Scanner sc = new Scanner(lang);
+		Scanner sc = new Scanner(lang, "UTF-8");
 		while (sc.hasNextLine()) {
 			data = sc.nextLine();
 			dataParsed = data.split(",", 2);
